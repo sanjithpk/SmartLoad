@@ -13,7 +13,7 @@ $use=$_POST["user_name"];;
 $pwd=$_POST["password"];;
 
 
-  $sql="select * from login where username='".$use."' AND password='".$pwd."'";
+  $sql="select * from login1 where username='".$use."' AND password='".$pwd."'";
  $result=mysqli_query($conn,$sql) or die(mysql_error($conn));
   $rows=mysqli_num_rows($result);
   
