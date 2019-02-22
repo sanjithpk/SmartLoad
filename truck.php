@@ -4,22 +4,23 @@ $servername='localhost';
 $username='root';
 $password='';
 $dbname='sload';
-$conn=new mysqli($servername,$username,$password,$dbname);
-if ($conn->connect_error) {
-	die("Failed".$conn->connect_error);
+$con=new mysqli($servername,$username,$password,$dbname);
+if ($con->connect_error) {
+	die("Failed".$con->connect_error);
 }
  
 // $use=$_POST["user_name"];;
 // $pwd=$_POST["password"];;
 
 
-  $sql="INSERT INTO truck (length, breadth, height, capacity)
-  VALUES ('30', '10', '20', '100')";  
-  
-  if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
- $conn->close();
+  $sql="SELECT * FROM truck";
+  $result = mysqli_query($con, $sql);
+  if($result) {
+    while($row = mysqli_fetch_array($result)) {
+      $flag[] = $row;
+    }
+
+    print(json_encode($flag));
+  }
+  mysqli_close($con);
 ?>
