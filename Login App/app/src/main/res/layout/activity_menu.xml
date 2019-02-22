@@ -4,4 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu"/>
+    tools:context=".Menu">
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="427dp"
+        android:layout_height="264dp"
+        app:srcCompat="@drawable/Truck"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="68dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="144dp"
+        android:layout_height="129dp"
+        app:srcCompat="@drawable/analytics"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="379dp" />
+</android.support.constraint.ConstraintLayout>
