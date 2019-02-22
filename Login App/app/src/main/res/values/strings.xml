@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SmartLoad</string>
+    <string name="tv1">CAPACITY</string>
+    <string name="tv2">DIMENSIONS</string>
+    <string name="tv3">DIAMETER</string>
+    <string name="tv4">TYRE CODE</string>
+</resources>
